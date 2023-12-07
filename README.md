@@ -10,7 +10,17 @@ docker push alienwow/puppeteerindocker:1.0.0-node14.16.0
 ## Running on Alpine
 
 ```bash
-docker build -f Dockerfile --rm -t alienwow/puppeteerindocker:1.0.1-node14.15.3 .
+
+docker login --username=wuwh@xuantongelearning registry.cn-beijing.aliyuncs.com
+
+docker build -f Dockerfile --rm -t registry.cn-beijing.aliyuncs.com/xuantongjiaoshi/puppeteerindocker:1.0.3-node14.16.0 .
+
+docker push registry.cn-beijing.aliyuncs.com/xuantongjiaoshi/puppeteerindocker:1.0.3-node14.16.0
+
+sudo docker login --username=wuwh@xuantongelearning registry-vpc.cn-beijing.aliyuncs.com
+docker pull registry.cn-beijing.aliyuncs.com/xuantongjiaoshi/puppeteerindocker:1.0.3-node14.16.0
+
+
 ```
 
 ## puppeteer troubleshooting

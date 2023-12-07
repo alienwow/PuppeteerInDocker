@@ -1,5 +1,5 @@
 
-FROM node:14.15.3-alpine3.12
+FROM node:14.16.0-alpine3.12
 
 # 更换镜像源
 
@@ -20,7 +20,7 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
     PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
 # Puppeteer v10.0.0 works with Chromium 92.
-RUN yarn add puppeteer@10.0.0
+RUN yarn add puppeteer@15.5.0
 
 # Add user so we don't need --no-sandbox.
 RUN addgroup -S pptruser && adduser -S -g pptruser pptruser \
